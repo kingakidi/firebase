@@ -1,0 +1,17 @@
+.form-container form {
+  background-color: #eee;
+  padding: 20px;
+  width: 400px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.profile-list {
+  padding: 20px;
+}
