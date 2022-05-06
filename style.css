@@ -15,3 +15,6 @@
 .profile-list {
   padding: 20px;
 }
+.list-group-item {
+  display: flex;
+}

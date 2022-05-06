@@ -12,9 +12,12 @@ let state = _("state");
 let showUsers = (sn, id, { name, age, state }) => {
   //   console.log(id, name, state, age);
 
-  showUsersContainer.innerHTML += `<li class="list-group-item" data-id='id'> (${sn}) Name: ${name} State: ${state} Age: ${age}</li>`;
+  showUsersContainer.innerHTML += `<li class="list-group-item" data-id='id'> <div> (${sn}) Name: ${name} State: ${state} Age: ${age}  </div> <button class="btn btn-danger remove-user" name="remove-user" onclick="deleteUser()"> X </button> </li>`;
 };
 
+function deleteUser(e) {
+  console.log(e);
+}
 let sn = 0;
 users.get().then((res) => {
   showUsersContainer.innerHTML = "";
@@ -31,6 +34,7 @@ addUserForm.addEventListener("submit", (e) => {
       name: name.value,
       state: state.value,
       age: age.value,
+      city: "Lagos ",
     })
     .then((res) => {
       console.log(res);
